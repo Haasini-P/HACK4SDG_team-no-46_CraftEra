@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - CraftConnect</title>
+    <link rel="stylesheet" href="cc3.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="CraftConnect Logo" class="logo-image" >
+        </div>
+        <div class="search-container">
+            <div class="search-input-container">
+                <input type="text" class="search-bar" placeholder="Search your item here">
+                <div class="search-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/10470/10470773.png" alt="Search Icon" class="icon">
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <span class="profile-icon">
+                <img src="https://www.citypng.com/public/uploads/preview/profile-user-round-white-icon-symbol-png-701751695033499brrbuebohc.png" alt="Profile" width="25px" height="25px">
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-header row">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/640px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg" alt="Profile Picture">
+                        <div>
+                            <div class="customer-name">PRADEEP</div>
+                            <div class="customer-number">+91-6789054321</div>
+                        </div>
+                    </div>
+                    <div class="row">Personal Info</div>
+                    <div class="row">My Orders</div>
+                    <div class="row">Sign Out</div>
+                    <div class="row delete">Delete My Account</div>
+                </div>
+            </span>
+            <span class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/8830/8830807.png" alt="Wishlist">
+            </span>
+            <span class="icon">
+                <img src="https://www.citypng.com/public/uploads/preview/hd-shopping-cart-white-logo-icon-transparent-png-701751694973936amdcratijm.png" alt="Cart">
+            </span>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+
+    <!-- Product Section -->
+    <div class="container">
+        <div class="left-section">
+            <img id="mainImage" src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-h-1_jpg_900x.png?v=1650026191" alt="Aura Dip Bowl"  width="50px" height=450px" class="main-image">
+            <div class="thumbnail-container">
+                <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-h-1_jpg_900x.png?v=1650026191" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)" width="0px">
+                <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-g-1_jpg_900x.png?v=1650026192" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-g-2_jpg_900x.png?v=1650026194" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-g-3_jpg_900x.png?v=1650026197" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-g-4_jpg_3000x.png?v=1650026199" alt="Thumbnail 5" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="product-name">Aura Dip Bowl</div>
+            <div class="product-description">
+                There is no limit to when or how you can use this bowl — a small portion of curry or stew is just one such idea.
+            </div>
+            <div class="price-quantity">
+                <div class="price">₹899.00</div>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" style="width: 40px; text-align: center;">
+                    <button onclick="changeQuantity(1)">+</button>
+                </div>
+            </div>
+            <div class="wishlist-cart">
+                <span class="wishlist-icon">♥</span>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+            <div class="additional-info">
+                <div><strong>Craft Type:</strong> Studio Pottery</div>
+                <div><strong>Description:</strong> Hand-thrown and glazed white, this little ceramic bowl is an attractive addition to your dining set-up...</div>
+                <div><strong>Made in:</strong> Rajasthan</div>
+                <div><strong>Material:</strong> Stoneware</div>
+                <div><strong>Dimensions:</strong> 9.2(L) x 9.2(B) x 6.6(H) cm; Dia: 9.2</div>
+                <div><strong>Capacity:</strong> 140 ml</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About CraftConnect</h4>
+                <p>Your go-to platform for artisan-crafted items from around the world. Discover unique pottery, textiles, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@craftconnect.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+        </div>
+        <p>&copy; 2024 CraftConnect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeImage(thumbnail) {
+            document.getElementById('mainImage').src = thumbnail.src;
+        }
+
+        function changeQuantity(amount) {
+            const quantityInput = document.getElementById('quantity');
+            let newQuantity = parseInt(quantityInput.value) + amount;
+            if (newQuantity < 1) newQuantity = 1;
+            quantityInput.value = newQuantity;
+        }
+    </script>
+</body>
+</html>

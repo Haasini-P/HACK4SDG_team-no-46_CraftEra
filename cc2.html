@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - CraftConnect</title>
+    <link rel="stylesheet" href="cc2.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="CraftConnect Logo" class="logo-image">
+        </div>
+        <div class="search-container">
+            <div class="search-input-container">
+                <input type="text" class="search-bar" placeholder="Search your item here">
+                <div class="search-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/10470/10470773.png" alt="Search Icon" class="icon">
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <span class="profile-icon">
+                <img src="https://www.citypng.com/public/uploads/preview/profile-user-round-white-icon-symbol-png-701751695033499brrbuebohc.png" alt="Profile" width="25px" height="25px">
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-header row">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/640px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg" alt="Profile Picture">
+                        <div>
+                            <div class="customer-name">PRADEEP</div>
+                            <div class="customer-number">+91-6789054321</div>
+                        </div>
+                    </div>
+                    <div class="row">Personal Info</div>
+                    <div class="row">My Orders</div>
+                    <div class="row">Sign Out</div>
+                    <div class="row delete">Delete My Account</div>
+                </div>
+            </span>
+            <span class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/8830/8830807.png" alt="Wishlist">
+            </span>
+            <span class="icon">
+                <img src="https://www.citypng.com/public/uploads/preview/hd-shopping-cart-white-logo-icon-transparent-png-701751694973936amdcratijm.png" alt="Cart">
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Sidebar Filters -->
+        <aside class="filters">
+            <h3>FILTERS </h3>
+
+            <!-- Category Filter -->
+            <div class="filter-section">
+                <h4>Category</h4>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><input type="checkbox"> Pottery</li>
+                    <li><input type="checkbox"> Textiles</li>
+                    <li><input type="checkbox"> Furniture</li>
+                    <li><input type="checkbox"> Leatherwork</li>
+                    <li><input type="checkbox"> Home Decor</li>
+                    <li><input type="checkbox"> Jewelry</li>
+                    <li><input type="checkbox"> Basketry</li>
+                </ul>
+            </div>
+            <!-- Price Range Filter -->
+            <div class="card">
+                <h4>Price</h4>
+                <div class="price-content" >
+                    <div>
+                        <p id="price-display">₹5000</p> <!-- Display current selected price -->
+                    </div>
+                </div>
+                <div class="range-slider">
+                    <input type="range" id="price-range" value="5000" min="300" max="10000" step="10" />
+                </div>
+            </div>
+    
+
+
+            <!-- Color Palette Filter -->
+<div class="filter-section">
+    <h4>Color </h4>
+    <input type="text" class="color-search-bar" placeholder="Search color..." oninput="filterColors()">
+    <div class="color-palette">
+        <label><input type="checkbox"><span class="color-circle" style="background-color: red;"></span> Red</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: blue;"></span> Blue</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: green;"></span> Green</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: yellow;"></span> Yellow</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: black;"></span> Black</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: white;"></span> White</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: violet;"></span> Violet</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: darkgreen;"></span> Darkgreen</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: purple;"></span> Purple</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: teal;"></span> Teal</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: firebrick;"></span> FireBrick</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: maroon;"></span> Maroon</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: royalblue;"></span> Royal Blue</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: pink;"></span>Pink</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: gray;"></span>Gray</label>
+        <label><input type="checkbox"><span class="color-circle" style="background-color: brown;"></span>Brown</label>
+     
+
+
+    </div>
+</div>
+        </aside>
+
+         <!-- Right Content Area -->
+         <section class="products-section">
+            <div class="products-header">
+                <h2>Products</h2>
+                <div class="sort-by">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="recommended">Recommended</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="whats-new">What's New</option>
+                        <option value="price-low-high">Price: Low to High</option>
+                        <option value="price-high-low">Price: High to Low</option>
+                        <option value="customer-rating">Customer Rating</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid">
+                <!-- Placeholder for no products -->
+                <div id="no-products-message" style="display: none;">No products found. Please adjust your filters.</div>
+                
+
+            <div class="products-section">
+                <div class="products-header">
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="Pottery" data-color="Pink" data-price="₹899.00" >
+                        <!-- Main Image -->
+                        <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-h-1_jpg_900x.png?v=1650026191" alt="Product Front" class="product-image" width="140px" height="190px">
+                        <!-- Hover Image -->
+                        <img src="https://ikaiasai.com/cdn/shop/products/KDINCEBW004-g-1_jpg_900x.png?v=1650026192" alt="Product Back" class="hover-image" width="210px" height="220px">
+                        <h3>Aura Dip Bowl</h3>
+                        <p>₹899.00</p>
+                        <div class="rating">★★★★☆ (4.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                    <!-- Product 2-saree -->
+                    <div class="product-card" data-category="Textiles" data-color="White" data-price="₹999.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/919lFRIWVhL.SY879.jpg" alt="Saree" class="product-image" width="160px" height="190px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/91GkHMKnTTL.SY879.jpg" alt="Saree" class="hover-image" height="210px" width=" 170px"   >
+                        <h3>Aqua Dream Saree</h3>
+                        <p>₹999.00</p>
+                        <div class="rating">★★★☆☆ (3.5)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                
+                    <!-- Product 3 home decor-->
+                    <div class="product-card" data-category="Home decor" data-color="yellow,blue,Brown,gray" data-price="₹299.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/71W0D-K-tBL.SX679.jpg" alt="Product Front" class="product-image" width="160px" height="184px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/7175F3H34oL.SL1500.jpg" alt="Product Back" class="hover-image" width="140px" height="194px" >
+                        <h3>Four Little Muses</h3>
+                        <p>₹299.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 4-leather -->
+                    <div class="product-card" data-category="Leatherwork" data-color="Brown" data-price="₹359.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81t6Do5WTVL.SX679.jpg" alt="Product Front" class="product-image" width="170px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81os6lJtdmL.SX679.jpg" alt="Product Back" class="hover-image"  width="220px" height="220px">
+                        <h3>Urban Elegance Purse</h3>
+                        <p>₹359.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 5-furniture -->
+                    <div class="product-card" data-category="Furniture" data-color="Maroon,Brown" data-price="₹12999.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61Ru7OX5C3L.SX679.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51Y4RsMyCGL.SX679.jpg" alt="Product Back" class="hover-image"  width="210px" height="220px">
+                        <h3>Dining Delights Table</h3>
+                        <p>₹12999.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 6-basketry -->
+                    <div class="product-card" data-category="Basketry" data-color="Brown" data-price="₹949.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81-mP-T8bhL.SX679.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81fmL9dFQFL.SX679.jpg" alt="Product Back" class="hover-image"   width="210px" height="240px">
+                        <h3>Elegant Square Basket</h3>
+                        <p>₹949.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 7 -saree -->
+                    <div class="product-card" data-category="Textiles" data-color="Purple,violet" data-price="₹1499.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61GzQN-3FqL.SX679.jpg" alt="Product Front" class="product-image"  width="210px" height="210px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51aktp0rGgL.jpg" alt="Product Back" class="hover-image"  width="210px" height="240px">
+                        <h3>Printed Kurta Set</h3>
+                        <p>₹1499.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 8 -Leather-->
+                    <div class="product-card" data-category="Leatherwork" data-color="Black" data-price="₹589.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/71PWQ1b8LHL.SX679.jpg" alt="Product Front" class="product-image"   width="210px" height="210px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/71KIc-ourNL.SX679.jpg" alt="Product Back" class="hover-image"   width="210px" height="210px">
+                        <h3>Royal Leather Belt</h3>
+                        <p>₹589.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                    <!-- Product 9 -pottery -->
+                    <div class="product-card" data-category="Pottery" data-color="Blue" data-price="₹799.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81M3QY-GQEL.SY879.jpg" alt="Product Front" class="product-image"   width="210px" height="210px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81a7GVzx6oL.SY879.jpg" alt="Product Back" class="hover-image"    width="220px" height="250px">
+                        <h3>Elegant Vase</h3>
+                        <p>₹799.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                    <!-- Product 10-pottery -->
+                    <div class="product-card" data-category="Pottery" data-color="blue" data-price="₹799.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/51mPw19ucAL.jpg" alt="Product Front" class="product-image"   width="200px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/61CFQUDbNNL.SX679.jpg" alt="Product Back" class="hover-image"    width="220px" height="250px">
+                        <h3>Classic Vase</h3>
+                        <p>₹799.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 11 -Furniture -->
+                     <div class="product-card" data-category="Furniture" data-color="Black" data-price="₹11900.00" >
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61rrc++SfRL.SY879.jpg" alt="Product Front" class="product-image" width="220px"  height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/715a9aEHI2L.SX679.jpg" alt="Product Back" class="hover-image"    width="220px"  height="20px">
+                        <h3>Three-Stand Table</h3>
+                        <p>₹11900.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 12-Basketry-->
+                     <div class="product-card"  data-category="Basketry" data-color="Brown" data-price="₹999.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/51baKqpdVfL.SX300_SY300_QL70_FMwebp.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/61V36dLfWFL.SX679.jpg" alt="Product Back" class="hover-image"  width="210px" height="220px">
+                        <h3>Easy arry Basket</h3>
+                        <p>₹999.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 13-Saree -->
+                     <div class="product-card" data-category="Textiles" data-color="White" data-price="₹999.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/51BrJKGYJRL.SY879.jpg" alt="Product Front" class="product-image"   width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51c5nLZIpyL.SY879.jpg" alt="Product Back" class="hover-image"  width="200px" height="220px">
+                        <h3>Royal Men Shirt</h3>
+                        <p>₹999.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                    
+                     <!-- Product 14-pottery-->
+                     <div class="product-card" data-category="Pottery" data-color="Pink" data-price="₹879.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/41qseDgecSL.SX300_SY300_QL70_FMwebp.jpg" alt="Product Front" class="product-image" width="200px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51MQKUtgdWL.SX679.jpg" alt="Product Back" class="hover-image" width="200px" height="220px">
+                        <h3>Tiny Pink Vase</h3>
+                        <p>₹879.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 15-Home decor -->
+                     <div class="product-card" data-category="Home Decor" data-color="Brown,orange,yellow,green,purple" data-price="₹349.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81lDMsQoV2L.SX679.jpg" alt="Product Front" class="product-image"  width="200px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81m6hKJN2yL.SX679.jpg" alt="Product Back" class="hover-image"  width="200px" height="220px">
+                        <h3>Cute Showcase Tree</h3>
+                        <p>₹349.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 16 -Furniture-->
+                     <div class="product-card" data-category="Furniture" data-color="Brown" data-price="₹2499.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/41EtG34u-bL.jpg" alt="Product Front" class="product-image"  width="200px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/41iTP5jJb9L.jpg" alt="Product Back" class="hover-image"  width="200px" height="220px">
+                        <h3>Beautiful Sofaset</h3>
+                        <p>₹2499.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 17 -Leather-->
+                     <div class="product-card" data-category="Leatherwork" data-color="Brown" data-price="₹2299.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/91RcOs7rSHL.SX679.jpg" alt="Product Front" class="product-image"  width="200px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81V3GHTwfBL.SX679.jpg" alt="Product Back" class="hover-image"  width="230px" height="220px">
+                        <h3> Leather Bag</h3>
+                        <p>₹2299.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 18-Furniture -->
+                     <div class="product-card" data-category="Furniture" data-color="Brown" data-price="₹1999.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61v1YC0MWcL.SX679.jpg" alt="Product Front" class="product-image" width="200px" height="220px" >
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/41ZYjXCQ-eL.SX679.jpg" alt="Product Back" class="hover-image" width="225px" height="220px">
+                        <h3>Coffee Table</h3>
+                        <p>₹1999.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 19-pottery -->
+                     <div class="product-card" data-category="Pottery" data-color="Blue,Yellow" data-price="₹1899.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61SPoEb5GWL.SX679.jpg" alt="Product Front" class="product-image"  width="217px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/71z+d+B7CWL.SX679.jpg" alt="Product Back" class="hover-image"  width="229px" height="220px">
+                        <h3>Artisan Ceramic Bowl</h3>
+                        <p>₹1899.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 20-Saree -->
+                     <div class="product-card" data-category="Textiles" data-color="green,blue" data-price="₹1599.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/91-V6MJ0IXL.SX679.jpg" alt="Product Front" class="product-image" width="215px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/91MpQN2OkEL.SX679.jpg" alt="Product Back" class="hover-image"  width="229px" height="220px">
+                        <h3>Soft Touch Towel</h3>
+                        <p>₹1599.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 21-Saree -->
+                     <div class="product-card" data-category="Textiles" data-color="Teal" data-price="₹1649.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61Zyp1rAqOL.SX679.jpg" alt="Product Front" class="product-image" width="215px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/71ckBdiiIaL.SX679.jpg" alt="Product Back" class="hover-image" width="229px" height="220px">
+                        <h3>Luxe Satin Scarf</h3>
+                        <p>₹1649.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button >Click to view</button>
+                    </div>
+                     <!-- Product 22-Furniture -->
+                     <div class="product-card" data-category="Furniture" data-color="white" data-price="₹15999.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/71C3mv1c3aL.SX679.jpg" alt="Product Front" class="product-image" width="211px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/31fHQQ9+9iL.jpg" alt="Product Back" class="hover-image" width="220px" height="220px">
+                        <h3>Coffee Table</h3>
+                        <p>₹15999.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 23-Home decor -->
+                     <div class="product-card" data-category="Home Decor" data-color="Pink" data-price="₹359.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/614Uv6rxzIL.SX679.jpg" alt="Product Front" class="product-image" width="213px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/61vp9HjCawL.SX679.jpg" alt="Product Back" class="hover-image" width="229px" height="220px">
+                        <h3>Reading Companion</h3>
+                        <p>₹359.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 24-Furniture-->
+                     <div class="product-card" data-category="Furniture" data-color="Brown" data-price="₹1199.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/71Z3zsvWqdL.SX679.jpg" alt="Product Front" class="product-image" width="215px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81YJcz-MTyL.SX679.jpg" alt="Product Back" class="hover-image" width="220px" height="220px">
+                        <h3>Shoe Organizer Table</h3>
+                        <p>₹1199.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                     <!-- Product 25-Saree -->
+                     <div class="product-card" data-category="Textiles" data-color="Black" data-price="₹499.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/71HUEe3uIDL.SX679.jpg" alt="Product Front" class="product-image"  width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51Lm561AdfL.SX679.jpg" alt="Product Back" class="hover-image" width="220px" height="220px">
+                        <h3>Warm Head Muffler</h3>
+                        <p>₹499.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 26 -pottery-->
+                     <div class="product-card" data-category="Pottery" data-color="White" data-price="₹859.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/41KNPW86BKL.SX300_SY300_QL70_FMwebp.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51G2MLk96gL.SX679.jpg" alt="Product Back" class="hover-image"  width="220px" height="270px">
+                        <h3>Elegant Flower Vase</h3>
+                        <p>₹859.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 27-Basketry -->
+                     <div class="product-card" data-category="Basketry" data-color="Brown" data-price="₹799.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81dmC-zu3+L.SX679.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81CyIJ5vrqL.SX679.jpg" alt="Product Back" class="hover-image" width="225px" height="220px">
+                        <h3>Multi-Purpose Basket</h3>
+                        <p>₹799.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 28-Furniture-->
+                     <div class="product-card" data-category="Furniture" data-color="Brown" data-price="₹1599.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/51X8HFUl1bL.SX679.jpg" alt="Product Front" class="product-image" width="218px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/51zBrcRNYiL.SX679.jpg" alt="Product Back" class="hover-image" width="225px" height="220px">
+                        <h3>Wooden End Table</h3>
+                        <p>₹1599.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 29-Basketry-->
+                     <div class="product-card" data-category="Basketry" data-color="Brown" data-price="₹799.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/81W0qYCzX6L.SX679.jpg" alt="Product Front" class="product-image" width="210px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/81LocD7bSnL.SL1500.jpg" alt="Product Back" class="hover-image" width="229px" height="220px">
+                        <h3>Woven Storage Basket</h3>
+                        <p>₹799.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button  onclick="window.location.href='cc3.html'">Click to view</button>
+                    </div>
+                     <!-- Product 30-Leather -->
+                     <div class="product-card" data-category="Leatherwork" data-color="Black" data-price="₹899.00">
+                        <!-- Main Image -->
+                        <img src="https://m.media-amazon.com/images/I/61OaCbm1dSL.SY695.jpg" alt="Product Front" class="product-image" width="215px" height="220px">
+                        <!-- Hover Image -->
+                        <img src="https://m.media-amazon.com/images/I/61KTNQLhG5L.SY695.jpg" alt="Product Back" class="hover-image" width="215px" height="220px">
+                        <h3>Casual Office Boots</h3>
+                        <p>₹899.00</p>
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button onclick="window.location.href='cc3.html'" >Click to view</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="cc2.js"></script>
+</body>
+</html>

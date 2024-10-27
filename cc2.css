@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: black;
+}
+.logo img {
+    max-width: 60px;
+    height: 60px;
+    display: block;
+    
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 480px;
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon .icon {
+    padding-top: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar {
+    padding: 10px 0px 10px 55px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    width: 450px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left:20px;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Profile Card Styling */
+.profile-icon {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding-left: 17px;
+
+}
+
+.profile-card {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    width: 250px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+/* Show Profile Card on Hover */
+.profile-icon:hover .profile-card {
+    display: block;
+}
+
+/* Profile Card Elements */
+.profile-card .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-card .customer-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.profile-card .customer-number {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.profile-card .row {
+    padding: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    border-top: 1px solid #eee;
+}
+
+.profile-card .row:first-child {
+    border-top: none;
+}
+
+.profile-card .row:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-card .delete {
+    color: #e74c3c;
+}
+
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.filters {
+    width: 20%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#e7d6d6;
+    border: #2ecc71;
+    
+}
+
+.filters h3{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 25px;
+     padding-bottom: 10px;
+}
+.filter-section {
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+
+
+.card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.range-slider {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    width: 100%; /* Full width of the container */
+    margin: 10px 0; /* Margin for better spacing */
+}
+
+.noUi-target {
+    background: #d3d3d3; /* Default background */
+}
+
+.noUi-handle {
+    background: #3498db; /* Handle color */
+    border: 2px solid #2980b9;
+}
+
+/* Changing the color of the slider bar based on the range */
+.noUi-connect {
+    background: #2ecc71; /* Color for selected range */
+}
+
+.noUi-handle:focus {
+    outline: none;
+}
+
+.color-search-bar {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #e3d6d6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.color-palette label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.products-section {
+    width: 80%;
+    margin: auto; /* Center the section */
+    
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* Product grid layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between products */
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e6a9a9;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* For image layering */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    width: 100%; /* Ensure card takes up full available width */
+    max-width: 230px; /* Optional: limit max-width to match image container */
+    box-sizing: border-box; /* Include padding and border in width */
+    height: 400px;
+}
+
+.product-image,
+.hover-image {
+    max-width: 300px; /* Ensure both images take up full width of the card */
+    max-height: 1000px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match the card's border radius */
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.hover-image {
+    position: absolute; /* Position the hover image absolutely */
+    top: 0; /* Align with the top of the card */
+    left: 0; /* Align with the left of the card */
+    opacity: 0; /* Initially hide the hover image */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.product-card:hover .hover-image {
+    opacity: 1; /* Show the hover image on hover */
+}
+
+.product-card:hover .product-image {
+    opacity: 0; /* Hide the main image on hover */
+}
+
+/* Product title and price */
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-card p {
+    color: #e67a7a;
+    font-weight: bold;
+}
+
+/* Star rating */
+.rating {
+    color: #f39c12;
+    font-size: 14px;
+}
+button{
+    background-color: #dedcd9;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: #e7d6d6;
+    box-shadow: none;
+    font-size: medium;
+    margin-top: 10px;
+}

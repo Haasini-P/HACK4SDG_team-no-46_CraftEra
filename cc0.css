@@ -1,0 +1,91 @@
+cc0.css * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ded68a; /* Soft light background */
+}
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f8f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: #007bff;
+    height:1600px
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #060c01;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 15px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: border-color 0.3s ease;
+    font-style: italic;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.checkbox-group {
+    margin: 10px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(132, 87, 5);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+    height: 80px;
+}
+
+button:hover {
+    background-color: #057a0d;
+}

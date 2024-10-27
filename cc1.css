@@ -1,0 +1,316 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ede9e9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: black;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+}
+
+.logo img {
+    max-width: 90px;
+    height: 60px;
+    display: block;
+    padding-left: 10px;
+
+
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 550px;
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon .icon {
+    padding-top: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar {
+    padding: 10px 0px 10px 55px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    width: 450px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left:20px;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Profile Card Styling */
+.profile-icon {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding-left: 17px;
+
+}
+
+.profile-card {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    width: 250px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+/* Show Profile Card on Hover */
+.profile-icon:hover .profile-card {
+    display: block;
+}
+
+/* Profile Card Elements */
+.profile-card .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-card .customer-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.profile-card .customer-number {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.profile-card .row {
+    padding: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    border-top: 1px solid #eee;
+}
+
+.profile-card .row:first-child {
+    border-top: none;
+}
+
+.profile-card .row:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-card .delete {
+    color: #e74c3c;
+}
+
+
+
+
+.sidebar {
+    position: fixed; /* Fix the sidebar to the left of the screen */
+    left: -250px; /* Hide it off-screen initially */
+    top: 0;
+    width: 250px; /* Set the width of the sidebar */
+    height: 100%; /* Full height */
+    background-color: #fff; /* Background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    transition: left 1s ease; /* Smooth transition for opening/closing */
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #eea5c9;
+
+}
+
+.sidebar.active {
+    left: 0; /* Move the sidebar into view */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aquamarine; /* Header background color */
+}
+
+.circle-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for pop effect */
+}
+
+.circle-item:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.circle-label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+ /* Slider Container */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 10s ease; /* Smooth transition for each slide */
+    width: 800%; /* 8 cards, each will take up 100% of the container width */
+}
+
+.slider-card {
+    width: 100%; /* Each card takes full width of the container */
+    height: 300px; /* Fixed height for slider cards */
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider-card img {
+    width: 1200px; /* Fixed width for images */
+    height: 300px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images fit well without distortion */
+}
+
+/* Dots Styling */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff69b4;
+}
+
+#trending-collections, #popular-picks {
+    padding: 20px;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-around; /* Space items evenly */
+}
+
+.collection-card {
+    flex: 0 0 180px; /* Fixed width for each card */
+    margin: 10px; /* Spacing between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow of content */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.collection-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.collection-card img {
+    width: 100%; /* Make images responsive to card width */
+    height: auto; /* Maintain aspect ratio */
+
+}
+
+button {
+    background-color: #ff69b4; /* Example color */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e55bbd; /* Darker shade on hover */
+} 
