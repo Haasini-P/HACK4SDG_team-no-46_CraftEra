@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Choice</title>
+    <style>
+        /* Basic Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-Screen Background Image */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('aesthetic\ image\ of\ artisans\ and\ traditions.png'); 
+            backdrop-filter: blur(2px);/* Replace with your image path */
+            background-size: cover;        /* Makes the image cover the entire screen */
+            background-position: center;   /* Centers the image */
+            background-repeat: no-repeat;  /* Prevents repeating */
+            background-attachment: fixed;  /* Fixes image in place when scrolling */
+        }
+
+        /* Container for Content */
+        .container {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px; /* Larger font size for the heading */
+        }
+
+        /* Button Styling */
+        .button-group {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+            justify-content: center;
+        }
+
+        .btn {
+            background: orange;
+            padding: 15px 30px; /* Increased padding for larger buttons */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px; /* Larger font size for buttons */
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>How would you like to login?</h2>
+        
+        <div class="button-group">
+            <a class="btn"  onclick="window.location.href='index.html'">Artisan</a>
+            <a class="btn"  onclick="window.location.href='customer.html'">Customer</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

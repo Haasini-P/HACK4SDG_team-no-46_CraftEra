@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    background-color:black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 70px;
+    width:100px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 20px;
+    margin: 10px;
+   
+   
+}
+
+.search-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box input {
+    padding: 14px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 14px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #555;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.product-card:hover img {
+    transform: scale(1.1);
+}
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+.button-container {
+    text-align: center;
+}
+
+.view-button {
+     /* Button background color */
+    color:rgb(70, 130, 180); /* Text color */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: whitesmoke; /* Darker shade on hover */
+}
+
+.arrow {
+    font-size: 18px; /* Size of the arrow */
+}
+.img1{
+    height:220px;
+}
+.success-container {
+    background:  #f9f9f9;
+    padding: 3px;
+   
+}
+.go-back-button {
+  
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border:3px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.go-back-button:hover {
+    background: rgb(84, 82, 82);
+}
+.nm{
+    font-style: oblique;
+}
+.explore-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 800px;
+    /* Full viewport height to center vertically */
+  
+}
+
+.explore-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.welcm{
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 2.3rem;
+}

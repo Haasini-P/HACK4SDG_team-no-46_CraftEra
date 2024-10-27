@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload form</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+
+    <!-- Artisan Profile Section -->
+
+       
+
+<div class="bd2">
+    <!-- Filter Section -->
+
+    <!-- Upload Product Section -->
+
+  <div class="container">
+    <h2>Product Upload Form</h2>
+    <form>
+        <!-- Product Name -->
+        <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Enter product description" required></textarea>
+        </div>
+
+        <!-- Price -->
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" placeholder="Enter product price" required>
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="handmade">Handmade</option>
+                <option value="pottery">Pottery</option>
+                <option value="textiles">Textiles</option>
+                <option value="jewelry">Jewelry</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+
+        <!-- Quantity -->
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter available quantity" required>
+        </div>
+
+        <!-- Shipping Details -->
+        <div class="form-group">
+            <label for="shippingDetails">Shipping Details</label>
+            <input type="text" id="shippingDetails" name="shippingDetails" placeholder="Enter shipping details (e.g., delivery time)">
+        </div>
+
+        <!-- Multiple Images -->
+        <div class="form-group">
+            <label for="productImages">Product Images</label>
+            <input type="file" id="productImages" name="productImages" multiple accept="image/*">
+        </div>
+
+        <!-- Tags for Search Optimization -->
+        <div class="form-group">
+            <label>Tags (Select relevant tags)</label>
+            <div class="tags">
+                <input type="checkbox" id="tagHandmade" name="tags" value="handmade">
+                <label for="tagHandmade">Handmade</label>
+            </div>
+            <div class="tags">
+                <input type="checkbox" id="tagPottery" name="tags" value="pottery">
+                <label for="tagPottery">Pottery</label>
+            </div>
+            <div class="tags">
+                <input type="checkbox" id="tagTextiles" name="tags" value="textiles">
+                <label for="tagTextiles">Textiles</label>
+            </div>
+            <div class="tags">
+                <input type="checkbox" id="tagJewelry" name="tags" value="jewelry">
+                <label for="tagJewelry">Jewelry</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Product</button>
+    </form>
+</div>
+
+
+    <!-- Artisan Products Section -->
+    
+    
+    <script src="index3.js"></script>
+</body>
+</html>

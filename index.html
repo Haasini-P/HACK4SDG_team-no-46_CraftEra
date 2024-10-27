@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Details Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+        body {
+            font-family: "Open Sans", sans-serif;
+            background-image: url('https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/b0e200a1-0b23-4f2c-a571-3c3ff27da107/7861d152-8145-469c-ae83-959d2c8eeb86.png'); /* Add a background image showcasing culture and traditions */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            
+            margin: 0;
+            padding: 0;
+            backdrop-filter: blur(3px); 
+        }
+
+        .form-container {
+            background: rgb(247, 230, 199,0.9);
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+          
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .submit-button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Your Details</h1>
+        <form id="artisanForm">
+            <div class="form-group">
+                <label for="name"> Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter artisan's name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="products">Products you like to sell:</label>
+                <textarea id="products" name="products" rows="2" placeholder="Enter products sold" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shopName">Shop Name:</label>
+                <input type="text" id="shopName" name="shopName" placeholder="Enter shop name" required>
+            </div>
+            <div class="form-group">
+                <label for="license">Shop License:</label>
+                <input type="text" id="license" name="license" placeholder="Enter shop license" required>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('artisanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const address = document.getElementById('address').value;
+            const products = document.getElementById('products').value;
+            const shopName = document.getElementById('shopName').value;
+            const license = document.getElementById('license').value;
+
+            alert('Artisan Details Submitted Successfully!\n' +
+                  'Name: ' + name + '\n' +
+                  'Mobile: ' + mobile + '\n' +
+                  'Address: ' + address + '\n' +
+                  'Products: ' + products + '\n' +
+                  'Shop Name: ' + shopName + '\n' +
+                  'Shop License: ' + license);
+        });
+        document.getElementById('artisanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index1.html'; // Redirect to success page after submission
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image:url(https://img.freepik.com/premium-photo/craft-fair-artisan-ceramic-dishes-tableware-easter-market-vilnius-lithuania_1014870-25037.jpg);
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(1px);
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgb(247, 230, 199,0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Page Header */
+h1 {
+    text-align: center;
+    
+    margin-bottom: 20px;
+}
+
+/* Section Container Styling */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+  
+    border-radius: 10px;
+
+}
+
+/* Product Info Section */
+.product-info-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-image-box {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-box {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.product-name {
+    margin-bottom: 10px;
+   
+    font-size: 24px;
+}
+
+.product-description, .product-price, .product-category, .product-views, .product-stock, .product-launch, .product-sku {
+    margin-bottom: 10px;
+ 
+}
+
+/* Sales Overview Section */
+.sales-overview-container .overview-details p {
+    font-size: 16px;
+    margin: 5px 0;
+   
+}
+
+/* Product Reviews Section */
+
+.product-reviews-container .reviews {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.rating-summary, .top-reviews {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.rating-summary ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.rating-list li {
+    margin-bottom: 5px;
+  
+}
+
+.top-reviews .review {
+    margin: 10px 0;
+   
+}
+
+/* Sales History Section */
+.sales-history-container .sales-graph {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sales-history-container .sales-graph img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Actions Section */
+.actions-container {
+    text-align: center;
+}
+
+.actions-container button {
+    background-color: #ffa41b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.actions-container button:hover {
+    background-color: #ff8c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-info-content, .reviews {
+        flex-direction: column;
+    }
+
+    .product-image-box, .product-details-box, .rating-summary, .top-reviews {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .actions-container button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+  
+}
+
+.review {
+    background-color: white;
+    padding: 20px;
+    width:500px;
+    padding-right:100px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.review img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.review span {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.rating {
+    font-size: 18px;
+    color: #ffa500;
+    margin: 5px 0;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.review-date {
+
+    font-size: 14px;
+}
+
+.review-details {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.verified {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.review-text {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.helpful {
+    font-size: 14px;
+    color: #888;
+}
+
+.helpful-btn,
+.report-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.helpful-btn:hover,
+.report-btn:hover {
+    background-color: #ddd;
+}
+.rev1{
+    padding-right: 100px;
+}

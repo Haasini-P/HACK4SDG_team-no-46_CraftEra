@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('WhatsApp\ Image\ 2024-10-27\ at\ 01.30.04_c49999ea.jpg'); /* Light aesthetic blue */
+            background-size: cover;
+            margin: 0;
+            backdrop-filter: blur(5px); 
+            padding: 0;
+        }
+
+        .order-container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color:antiquewhite;
+        }
+
+        .card {
+           background-color: #fff8dc;
+           /* Light aesthetic cream */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        
+        }
+
+        .card div {
+            margin-bottom: 10px;
+      
+        }
+
+        .card span {
+            font-weight: bold;
+          
+        }
+
+        .product-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .actions {
+            text-align: center;
+        }
+
+        .action-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .action-button:hover {
+            background-color: #218838;
+        }
+
+        .action-button.cancel {
+            background-color: #dc3545;
+        }
+
+        .action-button.cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-container">
+    <h1>Order Summary</h1>
+
+    <!-- Order Details Card -->
+    <div class="card">
+        <div class="section-title">Order Information</div>
+        <div>Order ID: <span>9123456</span></div>
+        <div>Date: <span>October 22, 2024</span></div>
+        <div>Status: <span>Processing</span></div>
+        <div>Estimated Delivery: <span>October 30, 2024</span></div>
+    </div>
+
+    <!-- Product Details Card -->
+    <div class="card">
+        <div class="section-title">Product Details</div>
+        <div>
+            <img class="product-img" src="https://m.media-amazon.com/images/I/41QxHLSVlSL.AC_UF480,480_SR480,480.jpg" alt="Product Image">
+            <div>Product Name: <span>Handmade Pottery Vase</span></div>
+            <div>Quantity: <span>2</span></div>
+            <div>Price: <span>₹450.00 each</span></div>
+            <div>Special Requests: <span>Custom color: Blue</span></div>
+        </div>
+    </div>
+
+    <!-- Customer Information Card -->
+    <div class="card">
+        <div class="section-title">Customer Information</div>
+        <div>Name: <span>Manoj Kumar</span></div>
+        <div>Address: <span>Saraswathi Nagar,Bodhan,Nizamabad,Telangana State.</span></div>
+        <div>Phone: <span>+91 9345986453</span></div>
+        <div>Email: <span>manojkumar345@email.com</span></div>
+    </div>
+
+    <!-- Payment Information Card -->
+    <div class="card">
+        <div class="section-title">Payment Information</div>
+        <div>Payment Method: <span>Credit Card (Visa)</span></div>
+        <div>Transaction ID: <span>#ABC123XYZ</span></div>
+        <div>Total Amount: <span>₹500.00</span></div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+        <button class="action-button">Accept Order</button>
+        <button class="action-button cancel">Cancel Order</button>
+    </div>
+</div>
+
+</body>
+</html>
