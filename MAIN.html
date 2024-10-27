@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftConnect</title>
+  <link rel="stylesheet" href="sty.css">
+  <style>
+    .slider-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        /* Container for the image row (track) */
+        .image-row {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        /* Each image inside the slider */
+        .image-row img {
+            width: 300px;
+            height: 200px;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        /* Arrow button styles */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+</style>
+</head>
+<body>
+  <!-- Navigation Section -->
+  <header>
+    <nav>
+      <!-- <div class="logo">
+        <img src="logo_white.jpg" alt="CraftConnect Logo">  Update the logo path -->
+      <!-- </div> -->
+      <div class="logo">
+        <img src="Logo.png" alt="Circular Image">
+    </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section" style="background-image: url('https://images.pexels.com/photos/4867416/pexels-photo-4867416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); ">
+    <div class="content">
+      <h1><b>Empowering Artisans, Preserving Culture</b></h1>
+      <p>Our mission is to create a world where every artisan has access to the tools, resources, and opportunities they need to thrive.</p>
+      <br>
+      <a href="#about" class="btn" >Explore </a>
+    </div>
+  </section>
+    <div class="slider-container">
+      <!-- Left arrow button -->
+      <button class="prev" onclick="moveSlide(1)">&#10094;</button>
+
+  <div class="image-row" id="slider">
+      <img src="https://images.pexels.com/photos/9744735/pexels-photo-9744735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image1">
+      <img src="https://images.pexels.com/photos/17777833/pexels-photo-17777833/free-photo-of-man-in-a-tailors-workshop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+      <img src="https://st2.depositphotos.com/6672578/10090/i/450/depositphotos_100907956-stock-photo-artisan-carefully-sanding-chair-frame.jpg" alt="Image 3">
+      <img src="https://cdn.pixabay.com/photo/2017/03/27/14/33/ancient-2179091_1280.jpg" alt="Image 4">
+      <img src="https://images.pexels.com/photos/15390906/pexels-photo-15390906/free-photo-of-artisans-sitting-in-a-workshop-and-working-on-cooper-patterned-trays.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5">
+      <img src="https://authindia.com/wp-content/uploads/2023/02/Rajasthan-Pottery-8-1536x864.jpg" alt="image6">
+      <img src="https://images.pexels.com/photos/7205810/pexels-photo-7205810.jpeg?auto=compress&cs=tinysrgb&w=600" alt="image6">
+      <img src="https://images.pexels.com/photos/6713039/pexels-photo-6713039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image6">
+      <img src="https://images.pexels.com/photos/848205/pexels-photo-848205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image6">
+      <img src="https://indian.handicrafts.gov.in/files/scheme_file/g18.jpg" alt="image6">
+      <img src="https://images.pexels.com/photos/19179109/pexels-photo-19179109/free-photo-of-potter-sitting-and-working-in-workshop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image6">
+      <img src="https://images.pexels.com/photos/2153135/pexels-photo-2153135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image6">
+  </div>
+  <button class="next" onclick="moveSlide(-1)">&#10095;</button>
+</div>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <!-- Left-side description -->
+      <div class="description">
+          <h2>Empowering Artisans</h2>
+          <p>
+              CraftConnect is an innovative platform that brings together rural artisans and global consumers. We aim to empower artisans by preserving traditional crafts and ensuring transparency in trade.
+          </p>
+          <p>
+              With features like AI customization, blockchain-enabled transactions, and AR storytelling, CraftConnect connects consumers to authentic handcrafted products while promoting sustainability and fair trade.
+          </p>
+          <p>CraftConnect isn't just a marketplace; it’s a movement to uplift marginalized communities, preserve timeless craftsmanship, and promote ethical consumption on a global scale.</p>
+      </div>
+
+      <!-- Right-side image -->
+      <div class="image">
+          <img src="https://images.pexels.com/photos/11137371/pexels-photo-11137371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Artisan at work">
+      </div>
+  </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Features</h2>
+
+    
+
+    <div class="features-gallery">
+          <div class="feature">
+            <div class="image-container" onclick="openModal('modal1')">
+              <img src="DALL·E 2024-10-23 14.29.13 - A digital marketplace interface featuring a blockchain-enabled platform for handcrafted products. The screen shows various artisan-made items, like te.webp" alt="Click to view description" width="250px" height="300px">
+          </div>
+      
+          <div class="modal" id="modal1">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('modal1')">&times;</span>
+                  <img src="DALL·E 2024-10-23 14.29.13 - A digital marketplace interface featuring a blockchain-enabled platform for handcrafted products. The screen shows various artisan-made items, like te.webp" alt="Description Image" height="400px">
+                  <div>
+                      <h2>Blockchain-enabled transactions</h2>
+                      <p>
+                        In CraftConnect, blockchain technology plays a crucial role in ensuring transparency, fairness, and trust within the artisan marketplace. By utilizing blockchain, every transaction on the platform is securely recorded on a decentralized ledger, allowing both artisans and customers to trace the entire lifecycle of a product—from its creation to its purchase. Smart contracts are employed to automate and enforce fair trade practices, ensuring artisans receive the correct payment instantly upon the sale of their products, without the need for intermediaries. Additionally, blockchain provides tamper-proof proof of authenticity for each handcrafted item, helping customers verify the origin and craftsmanship of their purchases. This integration not only empowers artisans by giving them control over pricing and transactions but also promotes ethical consumption by offering consumers full transparency into the production process, reinforcing trust and promoting sustainability.</p>
+                  </div>
+              </div>
+          </div>
+                       <p>Blockchain-enabled transactions</p>
+
+        </div>
+          <div class="feature">
+            <div class="image-container" onclick="openModal('modal2')">
+              <img src="DALL·E 2024-10-23 14.32.11 - A digital dashboard showcasing AI-driven trend forecasting for handcrafted products. The interface features graphs and charts predicting upcoming tren.webp" alt="Click to view description" width="250px" height="300px">
+          </div>
+      
+          <div class="modal" id="modal2">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('modal2')">&times;</span>
+                  <img src="DALL·E 2024-10-23 14.32.11 - A digital dashboard showcasing AI-driven trend forecasting for handcrafted products. The interface features graphs and charts predicting upcoming tren.webp" alt="Description Image" height="400px">
+                  <div>
+                      <h2>AI-driven trend forecasting</h2>
+                      <p>
+                        In CraftConnect, AI-driven trend forecasting empowers artisans to stay ahead of market demands by predicting emerging trends and customer preferences. Using advanced machine learning algorithms, the system analyzes vast amounts of data from global markets, social media, customer behavior, and purchasing patterns. This data-driven approach identifies upcoming trends in design, materials, colors, and styles, offering artisans valuable insights into what products are likely to become popular. By receiving these predictions, artisans can strategically plan their product offerings, ensuring they remain relevant and competitive in the global marketplace. This tool not only helps artisans optimize their production but also minimizes waste by aligning their craft with market demands, supporting both economic success and sustainable practices.</p>
+                  </div>
+              </div>
+          </div>
+                        <p>AI-driven trend forecasting</p>
+
+        </div>
+
+
+        <div class="feature">
+          <div class="image-container" onclick="openModal('modal3')">
+            <img src="DALL·E 2024-10-20 22.59.34 - A user interface displaying an AI-powered customization tool for handcrafted products, such as a customized fabric design. The tool showcases options .webp" alt="Click to view description" width="250px" height="300px">
+        </div>
+    
+        <div class="modal" id="modal3">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <img src="DALL·E 2024-10-20 22.59.34 - A user interface displaying an AI-powered customization tool for handcrafted products, such as a customized fabric design. The tool showcases options .webp" alt="Description Image"  height="400px">
+                <div>
+                    <h2>AI-powered customization tools</h2>
+                    <p>
+                      In CraftConnect, AI-powered customization tools enhance the user experience by offering personalized and dynamic product creation. These tools allow customers to co-create unique handcrafted products by selecting and modifying features such as materials, colors, and designs in real-time. Using advanced machine learning algorithms, the platform analyzes customer preferences and trends to recommend personalized design options, helping customers find items that align with their tastes. Furthermore, AI helps artisans optimize their product offerings by providing insights into current market demands and customer behaviors, enabling them to tailor their creations to suit evolving trends. This seamless integration of AI not only enhances customer engagement but also empowers artisans to stay competitive in the global market while maintaining the authenticity of their traditional crafts.</p>
+                </div>
+            </div>
+        </div>
+          <p>AI-powered customization tools</p>
+
+      </div>
+
+
+      <div class="feature">
+        <div class="image-container" onclick="openModal('modal4')">
+          <img src="DALL·E 2024-10-20 22.59.31 - A sleek digital interface showing an artisan product (like a handcrafted vase) being previewed in augmented reality. The product is floating in front .webp" alt="Click to view description" width="250px" height="300px">
+      </div>
+  
+      <div class="modal" id="modal4">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal('modal4')">&times;</span>
+              <img src="DALL·E 2024-10-20 22.59.31 - A sleek digital interface showing an artisan product (like a handcrafted vase) being previewed in augmented reality. The product is floating in front .webp" alt="Description Image"  height="400px">
+              <div>
+                  <h2>VR showrooms for immersive exploration</h2>
+                  <p>CraftConnect's VR showrooms offer an immersive, next-generation shopping experience, allowing customers to explore handcrafted products in a virtual space from the comfort of their own homes. Using Virtual Reality (VR) technology, users can enter a lifelike virtual environment where they can interact with products as if they were physically present. They can walk around, view items from different angles, and zoom in on intricate details, all while getting a sense of scale and texture that goes beyond what traditional online shopping offers. These VR showrooms replicate the atmosphere of artisan markets, enabling customers to feel a deeper connection to the craftsmanship and cultural heritage behind each product. This immersive exploration not only elevates the shopping experience but also helps artisans showcase their creations in a way that mirrors the richness and depth of real-world interactions, breaking geographical barriers and expanding their reach to global audiences.</p>
+              </div>
+          </div>
+      </div>
+               <p>VR showrooms for immersive exploration</p>
+
+    </div>
+
+    <div class="feature">
+      <div class="image-container" onclick="openModal('modal5')">
+        <img src="DALL·E 2024-10-20 22.59.37 - A clean and interactive user interface of an e-learning platform focused on traditional crafts. The platform showcases online courses with thumbnail p.webp" alt="Click to view description" width="250px" height="300px">
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <img src="DALL·E 2024-10-20 22.59.37 - A clean and interactive user interface of an e-learning platform focused on traditional crafts. The platform showcases online courses with thumbnail p.webp" alt="Description Image"  height="400px">
+            <div>
+                <h2>E-Learning platform</h2>
+                <p>The E-Learning platform within CraftConnect is designed to preserve and promote traditional crafts by providing artisans with access to online courses, workshops, and virtual events. This platform serves as a knowledge hub where artisans can learn new techniques, improve their skills, and stay updated on industry trends. Courses are tailored to both beginners and experienced artisans, covering a range of topics from the fundamentals of crafting to advanced design methods and sustainable practices. Additionally, the platform facilitates cultural exchange by offering virtual events where artisans can connect with peers, share expertise, and collaborate on projects. By incorporating interactive learning modules and multimedia resources, CraftConnect empowers artisans to grow professionally, expand their knowledge, and keep traditional crafts alive in the digital age, while also reaching new global markets.</p>
+            </div>
+        </div>
+    </div>
+             <p>E-Learning platform</p>
+
+  </div>
+  </section>
+  <!-- Team Section -->
+  <section id="team" class="section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="circle-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMmXyhRE_hpRHwK_TDEuH2aDCkat88s7NrQ&s" alt="Circular Image">
+      </div>
+        <h3>P.Haasini</h3>
+        <p>Founder, Management</p>
+        
+      </div>
+      <div class="team-member">
+        <div class="circle-image">
+          <img src="https://images.pexels.com/photos/7318930/pexels-photo-7318930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Circular Image">
+      </div>
+        <h3>P.Satvika</h3>
+        <p>Designing , Tech</p>
+      </div>
+      <div class="team-member">
+        <div class="circle-image">
+          <img src="https://img.freepik.com/premium-photo/portrait-professional-muslim-woman-office-backdrop-wearing-hijab-religion-concept_590464-233829.jpg" alt="Circular Image">
+      </div>
+        <h3>Syed Ameena</h3>
+        <p>Market, Engineering</p>
+      </div>
+      <!-- Add more team members here as needed -->
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="testimonial-box">
+      <div class="icon-container">
+        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="User Icon">
+        <h3>Mary Jonathan</h3>
+        <p>New York, USA</p>
+    </div>
+        <p>"CraftConnect has completely transformed my business. As a rural artisan, I struggled to find customers beyond my local community. Thanks to CraftConnect’s blockchain-enabled marketplace, my products now reach buyers from across the world, and I get fair pricing for my work!"</p>
+    </div>
+    <div class="testimonial-box">
+      <div class="icon-container">
+        <img src="https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="User Icon">
+        <h3>Jane Smith</h3>
+        <p>Maple street, UK</p>
+    </div>
+        <p>"As someone passionate about cultural heritage, I love the e-learning platform on CraftConnect. I’ve taken courses on woodcarving and embroidery, taught by master artisans from different cultures.It’s amazing to learn these techniques supporting the preservation of traditional crafts."</p>
+    </div>
+    <div class="testimonial-box">
+      <div class="icon-container">
+        <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="User Icon">
+        <h3>Emily Johnson</h3>
+        <p>Colorado, Russia</p>
+    </div>
+        <p>"The customization feature on CraftConnect is unlike anything I’ve experienced before. I was able to personalize a handcrafted vase with my own design through their AR visualization tool, and seeing it in real-time made the whole process incredibly interactive and enjoyable!"</p>
+    </div>
+  </section>
+
+  
+  <!-- Login Section -->
+  <!-- <section id="login" class="section">
+    <h2>Login</h2>
+    <form id="Form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div id="successMessage" class="success"></div>
+  </div>
+  </section> -->
+  <section id="login" class="section">
+    <!-- Register Form Container -->
+    <div class="container1" id="signup" style="display:none;">
+        <h1 class="form-title">Register</h1>
+        <form method="post" action="register.php">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                <label for="fname">First Name</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+                <label for="lName">Last Name</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <label for="password">Password</label>
+            </div>
+            <input type="submit" class="btn1" value="Sign Up" onclick="window.location.href='login_choice.html'" name="signUp">
+        </form>
+        <div class="links">
+            <p>Already Have Account?</p>
+            <button id="signInButton" >Sign In</button>
+        </div>
+    </div>
+
+    <!-- Sign In Form Container -->
+    <div class="container1" id="signIn">
+        <h1 class="form-title">Sign In</h1>
+        <form method="post" action="login.php">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <label for="password">Password</label>
+            </div>
+            <p class="recover">
+                <a href="#">Recover Password</a>
+            </p>
+            <input type="submit" class="btn1" value="Sign In" onclick="window.location.href='login_choice.html'" name="signIn">
+        </form>
+        <div class="links">
+            <p>Don't have an account yet?</p>
+            <button id="signUpButton" >Sign Up</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </section>
+
+  <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Learn more about our app and how we can help you.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfSuIWGSSdkWl6S-dJnDCKQMTuty3MvhbrJw&s" alt="Instagram"></a>
+            <a href="#"><img src="https://f.hubspotusercontent30.net/hubfs/2235233/blog-import/2020/20-08-Aug/sm-icons-facebook-logo.png" alt="Facebook"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGGWFvs8Qvk6MzFRoFSdhkk_rRQOvIKvP9cQ&s" alt="Twitter"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ASvbXRCTzEYt_v1X_nDLt6hPQPejFWUUyA&s" alt="Pintrest"></a>
+        </div>
+        <div class="company-info">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="help-options">
+            <h3>Help</h3>
+            <ul>
+                <li>Support</li>
+                <li>Terms and Conditions</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 CraftConnect. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+        let currentPosition = 0;
+        const imageRow = document.getElementById('slider');
+        const totalImages = document.querySelectorAll('.image-row img').length;
+        const imageWidth = 310; // Image width + margin (300px + 10px)
+
+        // Function to move the slider
+        function moveSlide(direction) {
+            const maxMove = -(imageWidth * (totalImages - 3)); // Adjust for the visible images
+            currentPosition += direction * imageWidth;
+
+            // Restrict movement within bounds
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            } else if (currentPosition < maxMove) {
+                currentPosition = maxMove;
+            }
+
+            // Apply the transform to move the images
+            imageRow.style.transform = `translateX(${currentPosition}px)`;
+                // Close pop-up when close button is clicked
+          }
+          function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
+
+// Function to close a specific modal
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
